@@ -235,7 +235,7 @@ int main(int argc, char *argv[]) {
                 alg_list.insert(alg_map[optarg]);
                 break;
             case 'h':
-                print_help();
+                test::print_help();
                 break;
         }
     }
