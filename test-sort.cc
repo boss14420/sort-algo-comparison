@@ -151,7 +151,7 @@ void print_help(bool invalid_option = false)
         << "-r --ratio=RATIO\n"
         << "-q --max-eq-size\n"
         << "-x --fixed-max-value=VALUE\n"
-        << "-h --help                   Print this help\n" 
+        << "-h --help                   Print this help\n";
 }
 
 } // ---- end of namespace test -----
