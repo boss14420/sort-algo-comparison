@@ -136,6 +136,24 @@ void test_sort_input(std::istream& is,
     delete[] sample;
 }
 
+void print_help(bool invalid_option = false)
+{
+    std::ostream& out = invalid_option ? std::cerr : std::cout;
+
+    out << "Usage: test-sort <options>\n\n"
+        << "-a --algorithm=ALGORITHM    Sort algorithm: one of \"bubble\", "
+            "\"selection\", \"insertion\", \"merge\", \"quick\", "
+            "\"heap\", \"radix\", \"counting\"\n"
+        << "-f --from-file=FILE         Input file\n"
+        << "-s --start-size=SIZE\n"
+        << "-e --end-size=SIZE\n"
+        << "-d --diffrence=DIFF\n"
+        << "-r --ratio=RATIO\n"
+        << "-q --max-eq-size\n"
+        << "-x --fixed-max-value=VALUE\n"
+        << "-h --help                   Print this help\n" 
+}
+
 } // ---- end of namespace test -----
 
 int main(int argc, char *argv[]) {
@@ -217,6 +235,7 @@ int main(int argc, char *argv[]) {
                 alg_list.insert(alg_map[optarg]);
                 break;
             case 'h':
+                print_help();
                 break;
         }
     }
